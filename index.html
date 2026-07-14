@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Popatlal & Rita — Wedding Invitation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
@@ -979,25 +979,23 @@
 
   .fab-main:hover { transform: scale(1.06); }
 
-  .fab-label {
-    background: var(--maroon-deep);
-    border: 1px solid var(--gold);
-    color: var(--gold-light);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    padding: 7px 13px;
-    border-radius: 20px;
-    white-space: nowrap;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-    animation: labelBob 2.4s ease-in-out infinite;
-  }
-
-  #contact-fab.open .fab-label { display: none; }
-
-  @keyframes labelBob {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
+  @media (max-width: 480px) {
+    #contact-fab {
+      right: 16px;
+      bottom: max(18px, env(safe-area-inset-bottom));
+    }
+    .fab-main {
+      width: 50px;
+      height: 50px;
+    }
+    .fab-main svg {
+      width: 20px;
+      height: 20px;
+    }
+    .fab-option {
+      font-size: 11.5px;
+      padding: 8px 14px 8px 8px;
+    }
   }
 
   /* ===== BRAND FOOTER ===== */
@@ -1279,7 +1277,6 @@
 
 <!-- FLOATING CONTACT BUTTON -->
 <div id="contact-fab">
-  <div class="fab-label">Get Yours →</div>
   <a class="fab-option ig" href="https://instagram.com/royalinvite.co" target="_blank" rel="noopener">
     <span class="fab-icon ig"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2.2.28 3 .58a6 6 0 012.2 1.4 6 6 0 011.4 2.2c.3.8.5 1.8.6 3 .1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2.2-.6 3a6 6 0 01-1.4 2.2 6 6 0 01-2.2 1.4c-.8.3-1.8.5-3 .6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2.2-.3-3-.6a6 6 0 01-2.2-1.4 6 6 0 01-1.4-2.2c-.3-.8-.5-1.8-.6-3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2.2.6-3a6 6 0 011.4-2.2A6 6 0 016.5 0.5c.8-.3 1.8-.5 3-.6C10.8 2.2 11.2 2.2 12 2.2zm0 3a6.8 6.8 0 100 13.6 6.8 6.8 0 000-13.6zm0 11.2a4.4 4.4 0 110-8.8 4.4 4.4 0 010 8.8zm7-11.4a1.6 1.6 0 11-3.2 0 1.6 1.6 0 013.2 0z"/></svg></span>
     Instagram DM
